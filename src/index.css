@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+body {
+  font-family: "Neue Montreal", Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: #000000;
+}
+
+::selection {
+  background: rgba(56, 189, 248, 0.35);
+  color: #f7f7f7;
+}
+
+.vertical-timeline::before {
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.vertical-timeline-element-content {
+  background: #09090d !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.55) !important;
+}
+
+.vertical-timeline-element-content .vertical-timeline-element-date {
+  color: #a1a1aa !important;
+}
+
+.vertical-timeline-element-icon {
+  box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.06) !important;
+}
