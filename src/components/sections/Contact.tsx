@@ -32,10 +32,10 @@ export const Contact = () => {
       setStatus({ type: null, message: '' });
 
       await emailjs.sendForm(
-        'Portfolio',
-        'template_Portfolio',
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
         formRef.current,
-        'S04H9sHcZloS1nxlX'
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY
       );
 
       setStatus({
@@ -43,8 +43,6 @@ export const Contact = () => {
         message: 'Your message has been sent successfully! I\'ll get back to you soon.'
       });
       setFormState({ name: '', email: '', message: '' });
-      
-      // Clear success message after 4 seconds
       setTimeout(() => {
         setStatus({ type: null, message: '' });
       }, 4000);
@@ -54,8 +52,6 @@ export const Contact = () => {
         type: 'error',
         message: 'There was an error sending your message. Please try again or contact me directly.'
       });
-      
-      // Clear error message after 4 seconds
       setTimeout(() => {
         setStatus({ type: null, message: '' });
       }, 4000);
@@ -98,8 +94,8 @@ export const Contact = () => {
               <div className="flex h-full flex-col rounded-[32px] p-10 sm:p-12" style={{ backfaceVisibility: 'hidden' }}>
                 <div className="flex items-start justify-between gap-6">
                   <div>
-                    <p className="text-xs uppercase tracking-[0.35em] text-gray-500">Get in touch</p>
-                    <h3 className="mt-4 text-3xl font-semibold text-white sm:text-4xl">Drop me a line</h3>
+                    <p className="text-3xl font-bold text-white">Get in touch</p>
+                    <h3 className="mt-4 text-sm uppercase tracking-[0.35em] text-gray-500">Drop me a line</h3>
                   </div>
                 </div>
                 <form ref={formRef} onSubmit={handleSubmit} className="mt-12 flex flex-col gap-6">

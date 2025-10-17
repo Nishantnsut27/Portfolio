@@ -90,18 +90,31 @@ export const Navigation = () => {
           <button
             type="button"
             onClick={() => setOpen((prev: boolean) => !prev)}
-            className="flex h-9 w-9 items-center justify-center rounded-full border border-white/10 text-gray-200 transition-colors md:hidden"
+            className="flex h-9 w-9 items-center justify-center text-gray-200 transition-colors md:hidden"
             aria-expanded={open}
             aria-label="Toggle navigation"
           >
             <span className="sr-only">Menu</span>
-            <motion.div
-              animate={{ rotate: open ? 45 : 0 }}
-              className="h-4 w-4"
-            >
-              <span className="block h-0.5 w-full rounded-full bg-gray-200" />
-              <span className="mt-1 block h-0.5 w-full rounded-full bg-gray-200" />
-            </motion.div>
+            <span className="relative flex h-6 w-6 items-center justify-center">
+              <motion.span
+                initial={{ rotate: 0, y: -4 }}
+                animate={{ rotate: open ? 45 : 0, y: open ? 0 : -4 }}
+                transition={{ type: 'spring', stiffness: 300, damping: 20 }}
+                className="absolute h-0.5 w-4 rounded-full bg-gray-200"
+              />
+              <motion.span
+                initial={{ opacity: 1, scaleX: 1 }}
+                animate={{ opacity: open ? 0 : 1, scaleX: open ? 0 : 1 }}
+                transition={{ duration: 0.15 }}
+                className="absolute h-0.5 w-4 rounded-full bg-gray-200"
+              />
+              <motion.span
+                initial={{ rotate: 0, y: 4 }}
+                animate={{ rotate: open ? -45 : 0, y: open ? 0 : 4 }}
+                transition={{ type: 'spring', stiffness: 300, damping: 20 }}
+                className="absolute h-0.5 w-4 rounded-full bg-gray-200"
+              />
+            </span>
           </button>
         </div>
 

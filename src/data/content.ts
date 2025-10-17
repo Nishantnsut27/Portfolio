@@ -155,7 +155,7 @@ export const spotlightProjects: Project[] = [
   {
     name: 'NSUT Genie',
     description:
-      'Campus assistant that consolidates academic workflows, announcements, and context-aware tools for NSUT students.',
+      'Campus assistant that consolidates timetables, notices, exam updates, and campus utilities in one responsive dashboard, giving NSUT students a single source of truth for daily workflows.',
     technologies: ['React', 'Node.js', 'MongoDB'],
     liveUrl: 'https://nsut-genie.netlify.app/',
     repoUrl: 'https://github.com/nishantnsut27/nsut-genie'
@@ -163,7 +163,7 @@ export const spotlightProjects: Project[] = [
   {
     name: 'Muscle Torture Fitness',
     description:
-      'Gym website with adaptive messaging flows, membership plans, and WhatsApp powered onboarding.',
+      'Conversion-focused gym website with tailored membership funnels, trainer highlights, and instant WhatsApp onboarding that keeps leads engaged across devices.',
     technologies: ['HTML', 'CSS', 'JavaScript', 'WhatsApp API'],
     liveUrl: 'https://gym-website-ten-chi.vercel.app/',
     repoUrl: 'https://github.com/nishantnsut27/muscle-torture-fitness'
@@ -171,23 +171,15 @@ export const spotlightProjects: Project[] = [
   {
     name: 'Notify Music Player',
     description:
-      'Jamendo-backed music experience with curated playlists, search, and offline-friendly playback experiences.',
+      'Jamendo-backed music experience with curated playlists, search, adaptive theming, and offline-friendly playback so listeners can stay immersed without losing context.',
     technologies: ['React', 'Jamendo API', 'CSS'],
     liveUrl: 'https://notify-music-player.vercel.app/',
     repoUrl: 'https://github.com/nishantnsut27/notify-music-player'
   },
   {
-    name: 'YT Playlist Length Finder',
-    description:
-      'Analytics utility that calculates full playlist timing and insights through the YouTube Data API.',
-    technologies: ['React', 'YouTube API', 'JavaScript'],
-    liveUrl: 'https://yt-playlist-length-calculator-uj9d.vercel.app/',
-    repoUrl: 'https://github.com/nishantnsut27/yt-playlist-length-calculator'
-  },
-  {
     name: 'Netflix Clone',
     description:
-      'Pixel-precise recreation of Netflix with focus on navigation, responsive behaviour, and micro-interactions.',
+      'Pixel-precise Netflix recreation with hero carousels, hover previews, and responsive navigation that mirrors the real browsing flow across breakpoints.',
     technologies: ['HTML', 'CSS', 'JavaScript'],
     liveUrl: 'https://netflix-clone-nishant.vercel.app/',
     repoUrl: 'https://github.com/nishantnsut27/netflix-clone-nishant'
@@ -195,10 +187,10 @@ export const spotlightProjects: Project[] = [
   {
     name: 'IoT Smart Intruder Detection',
     description:
-      'ESP32-CAM powered surveillance system with motion capture, alerts, and secure media upload pipeline.',
+      'ESP32-CAM powered surveillance stack that snaps motion-triggered footage, pushes alerts to the companion mobile app, and syncs evidence to secure storage for realtime awareness.',
     technologies: ['ESP32-CAM', 'IoT', 'C++', 'Mobile App'],
     liveUrl: '',
-    repoUrl: ''
+    repoUrl: 'https://github.com/Nishantnsut27/Smart-intruder-system'
   }
 ];
 

@@ -40,10 +40,35 @@ export const About = () => (
     />
     <div className="container flex flex-col px-8 mx-auto md:px-20 gap-8">
       <div className="flex flex-col items-center md:items-start">
-        <h2 className="text-4xl font-bold text-white mb-1">
-          About Me
-          <span className="block h-1 w-24 bg-blue-500 mt-1"></span>
-        </h2>
+        <div className="inline-flex flex-col items-start">
+          <h2 className="text-4xl font-bold text-white mb-0 relative">
+            About Me
+          </h2>
+          <motion.div
+            className="mt-1 h-[18px] w-full overflow-hidden"
+            initial={{ width: 0 }}
+            whileInView={{ width: '100%' }}
+            transition={{ duration: 0.8, ease: 'easeInOut' }}
+          >
+            <motion.svg
+              viewBox="0 0 160 18"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-full w-full"
+            >
+              <motion.path
+                d="M2 9c8-8 16 8 24 0s16 8 24 0 16 8 24 0 16 8 24 0 16 8 24 0"
+                stroke="#4F46E5"
+                strokeWidth="6"
+                fill="none"
+                strokeLinecap="round"
+                initial={{ pathLength: 0 }}
+                whileInView={{ pathLength: 1 }}
+                transition={{ duration: 1.1, ease: 'easeInOut' }}
+              />
+            </motion.svg>
+          </motion.div>
+        </div>
         
         <div className="mt-8 text-center md:text-left max-w-3xl">
           <motion.p 

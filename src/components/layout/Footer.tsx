@@ -45,7 +45,7 @@ export const Footer = () => {
     <footer className="relative z-10 border-t border-white/10 bg-[rgba(8,8,10,0.88)]">
       <div className="mx-auto flex w-full max-w-6xl flex-col gap-6 px-6 py-6">
         <div className="flex flex-col items-center gap-4 text-center sm:flex-row sm:justify-between sm:text-left">
-          <p className="text-sm text-gray-400">© 2028 Nishant Raj. All rights reserved.</p>
+          <p className="text-sm text-gray-400">© 2025 Nishant Raj. All rights reserved.</p>
 
           <nav className="flex items-center justify-center gap-3 sm:justify-end">
             {contactItems.map(({ key, href, label, hover, Icon, render }) => (
