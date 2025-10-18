@@ -158,7 +158,7 @@ export const spotlightProjects: Project[] = [
       'Campus assistant that consolidates timetables, notices, exam updates, and campus utilities in one responsive dashboard, giving NSUT students a single source of truth for daily workflows.',
     technologies: ['React', 'Node.js', 'MongoDB'],
     liveUrl: 'https://nsut-genie.netlify.app/',
-    repoUrl: 'https://github.com/nishantnsut27/nsut-genie'
+    repoUrl: ''
   },
   {
     name: 'Muscle Torture Fitness',
@@ -166,7 +166,7 @@ export const spotlightProjects: Project[] = [
       'Conversion-focused gym website with tailored membership funnels, trainer highlights, and instant WhatsApp onboarding that keeps leads engaged across devices.',
     technologies: ['HTML', 'CSS', 'JavaScript', 'WhatsApp API'],
     liveUrl: 'https://gym-website-ten-chi.vercel.app/',
-    repoUrl: 'https://github.com/nishantnsut27/muscle-torture-fitness'
+    repoUrl: 'https://github.com/Nishantnsut27/Gym-Website'
   },
   {
     name: 'Notify Music Player',
@@ -174,7 +174,7 @@ export const spotlightProjects: Project[] = [
       'Jamendo-backed music experience with curated playlists, search, adaptive theming, and offline-friendly playback so listeners can stay immersed without losing context.',
     technologies: ['React', 'Jamendo API', 'CSS'],
     liveUrl: 'https://notify-music-player.vercel.app/',
-    repoUrl: 'https://github.com/nishantnsut27/notify-music-player'
+    repoUrl: 'https://github.com/Nishantnsut27/Notify-Music-Player'
   },
   {
     name: 'Netflix Clone',
@@ -182,7 +182,7 @@ export const spotlightProjects: Project[] = [
       'Pixel-precise Netflix recreation with hero carousels, hover previews, and responsive navigation that mirrors the real browsing flow across breakpoints.',
     technologies: ['HTML', 'CSS', 'JavaScript'],
     liveUrl: 'https://netflix-clone-nishant.vercel.app/',
-    repoUrl: 'https://github.com/nishantnsut27/netflix-clone-nishant'
+    repoUrl: 'https://github.com/Nishantnsut27/Netflix-clone'
   },
   {
     name: 'IoT Smart Intruder Detection',
@@ -229,7 +229,7 @@ export const educationHistory: Education[] = [
 ];
 
 export const contactInfo = {
-  email: 'nishantraj30488@gmail.com',
+  email: 'nishant30488@gmail.com',
   phone: '9717418746',
   location: 'New Delhi, India'
 };
