@@ -26,7 +26,7 @@ export const socialLinks: SocialLink[] = [
   },
   {
     label: 'LinkedIn',
-    href: 'https://linkedin.com/in/nishant-nsut27'
+    href: 'https://www.linkedin.com/in/nishant-raj-nsut27/'
   },
   {
     label: 'X',
