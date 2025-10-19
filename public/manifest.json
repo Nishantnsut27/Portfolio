@@ -1,21 +1,36 @@
 {
   "name": "Nishant Raj | Portfolio",
   "short_name": "Nishant Raj",
-  "description": "Portfolio of Nishant Raj, frontend-focused software engineer crafting immersive web experiences.",
+  "description": "Portfolio of Nishant Raj, 3rd year engineering student building immersive, innovative, and reliable digital experiences.",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#050506",
   "theme_color": "#050506",
   "icons": [
     {
-      "src": "/favicon.png",
+      "src": "/assets/logo/android-chrome-192x192.png",
       "sizes": "192x192",
       "type": "image/png"
     },
     {
-      "src": "/favicon.png",
+      "src": "/assets/logo/android-chrome-512x512.png",
       "sizes": "512x512",
       "type": "image/png"
+    },
+    {
+      "src": "/assets/logo/favicon-32x32.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "src": "/assets/logo/favicon-16x16.png",
+      "sizes": "16x16",
+      "type": "image/png"
+    },
+    {
+      "src": "/assets/logo/favicon.ico",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
     }
   ]
 }

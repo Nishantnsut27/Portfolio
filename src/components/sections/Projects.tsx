@@ -28,6 +28,7 @@ const ProjectCard = ({ project, index }: { project: Project; index: number }) =>
   const imageParallax = useTransform(scrollYProgress, [0, 1], [18, -18]);
   const image = projectImages[project.name];
   const isIotProject = project.name === 'IoT Smart Intruder Detection';
+  const isCompactProject = ['NSUT Genie', 'Muscle Torture Fitness', 'Notify Music Player'].includes(project.name);
 
   return (
     <motion.div
@@ -72,8 +73,17 @@ const ProjectCard = ({ project, index }: { project: Project; index: number }) =>
 
             <div className="pointer-events-none absolute inset-0 flex flex-col justify-between bg-black/75/0 px-6 py-6 opacity-0 backdrop-blur-[1px] transition duration-300 group-hover:pointer-events-auto group-hover:bg-black/70 group-hover:opacity-100">
               <div>
-                <h3 className="text-2xl font-semibold text-white">{project.name}</h3>
-                <p className="mt-4 text-sm leading-relaxed text-gray-300">{project.description}</p>
+                <h3 className={cn('text-2xl font-semibold text-white', isCompactProject && 'max-sm:text-xl max-sm:leading-snug')}>
+                  {project.name}
+                </h3>
+                <p
+                  className={cn(
+                    'mt-4 text-sm leading-relaxed text-gray-300',
+                    isCompactProject && 'max-sm:mt-2 max-sm:text-xs max-sm:leading-relaxed'
+                  )}
+                >
+                  {project.description}
+                </p>
               </div>
               <div className="flex flex-wrap items-center gap-3">
                 {project.liveUrl ? (

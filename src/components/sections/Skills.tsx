@@ -1,13 +1,13 @@
 import { motion } from 'framer-motion';
 import { SectionHeading } from '@/components/common/SectionHeading';
 import { skills } from '@/data/content';
-import arduinoIcon from '@/assets/icons/arduino.svg';
-import cppIcon from '@/assets/icons/cpp.svg';
-import gitIcon from '@/assets/icons/git.svg';
-import javascriptIcon from '@/assets/icons/javascript.svg';
+import arduinoIcon from '@/assets/icons/arduino.png';
+import cppIcon from '@/assets/icons/cpp.png';
+import githubIcon from '@/assets/icons/github.png';
+import javascriptIcon from '@/assets/icons/javascript.png';
 import nextjsIcon from '@/assets/icons/nextjs.svg';
 import nodejsIcon from '@/assets/icons/nodejs.svg';
-import pythonIcon from '@/assets/icons/python.svg';
+import pythonIcon from '@/assets/icons/python.png';
 import reactIcon from '@/assets/icons/react.svg';
 import tailwindIcon from '@/assets/icons/tailwind.svg';
 import typescriptIcon from '@/assets/icons/typescript.svg';
@@ -15,7 +15,7 @@ import typescriptIcon from '@/assets/icons/typescript.svg';
 const skillIconMap: Record<string, string> = {
   arduino: arduinoIcon,
   cpp: cppIcon,
-  git: gitIcon,
+  git: githubIcon,
   javascript: javascriptIcon,
   nextjs: nextjsIcon,
   nodejs: nodejsIcon,
@@ -53,6 +53,7 @@ export const Skills = () => {
         <div className="mt-14 grid grid-cols-3 gap-3 sm:gap-4 md:grid-cols-5 lg:grid-cols-5">
           {skills.map((skill, index) => {
             const iconSrc = skillIconMap[skill.icon];
+            const isJavaScript = skill.name === 'JavaScript';
 
             return (
               <motion.article
@@ -66,7 +67,11 @@ export const Skills = () => {
               >
                 <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-white/5 sm:h-14 sm:w-14 md:h-16 md:w-16">
                   {iconSrc ? (
-                    <img src={iconSrc} alt={`${skill.name} icon`} className="h-8 w-8 select-none object-contain sm:h-10 sm:w-10 md:h-12 md:w-12" />
+                    <img
+                      src={iconSrc}
+                      alt={`${skill.name} icon`}
+                      className={isJavaScript ? "h-12 w-12 sm:h-14 sm:w-14 md:h-16 md:w-16" : "h-8 w-8 select-none object-contain sm:h-10 sm:w-10 md:h-12 md:w-12"}
+                    />
                   ) : (
                     <span className="text-lg font-semibold text-white/70">{skill.name.charAt(0)}</span>
                   )}

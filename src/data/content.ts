@@ -128,7 +128,7 @@ export const skills: Skill[] = [
     highlights: ['Multi-theme token systems', 'Responsive animation recipes']
   },
   {
-    name: 'Git',
+    name: 'GitHub',
     icon: 'git',
     category: 'Tooling & Workflow',
     description: 'Collaboration, automation, and CI-ready branching flows.',
