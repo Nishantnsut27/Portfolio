@@ -35,7 +35,11 @@ const contactItems = [
     key: 'twitter',
     label: 'Follow on X',
     href: socialLinks.find((link) => link.label === 'X')?.href ?? '#',
-    render: () => <SiX className="h-4 w-4 transition group-hover:scale-110" />,
+    render: () => (
+      <span className="transition group-hover:scale-110">
+        <SiX size={16} />
+      </span>
+    ),
     hover: 'hover:border-white hover:bg-white/10 hover:text-black'
   }
 ];
@@ -43,18 +47,18 @@ const contactItems = [
 export const Footer = () => {
   return (
     <footer className="relative z-10 border-t border-white/10 bg-[rgba(8,8,10,0.88)]">
-      <div className="mx-auto flex w-full max-w-6xl flex-col gap-6 px-6 py-6">
-        <div className="flex flex-col items-center gap-4 text-center sm:flex-row sm:justify-between sm:text-left">
+      <div className="mx-auto flex w-full max-w-6xl flex-col gap-5 px-6 py-4">
+        <div className="flex flex-col items-center gap-3 text-center sm:flex-row sm:justify-between sm:text-left">
           <p className="text-sm text-gray-400">© 2025 Nishant Raj. All rights reserved.</p>
 
-          <nav className="flex items-center justify-center gap-3 sm:justify-end">
+          <nav className="flex items-center justify-center gap-2.5 sm:justify-end">
             {contactItems.map(({ key, href, label, hover, Icon, render }) => (
               <a
                 key={key}
                 href={href}
                 target={href.startsWith('http') ? '_blank' : undefined}
                 rel={href.startsWith('http') ? 'noopener noreferrer' : undefined}
-                className={`group flex h-11 w-11 items-center justify-center rounded-xl border border-white/10 bg-black/60 text-white transition ${hover}`}
+                className={`group flex h-10 w-10 items-center justify-center rounded-xl border border-white/10 bg-black/60 text-white transition ${hover}`}
                 aria-label={label}
               >
                 {render ? render() : <Icon className="h-5 w-5 transition group-hover:scale-110" />}

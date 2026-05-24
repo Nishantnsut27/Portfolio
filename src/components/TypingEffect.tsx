@@ -8,6 +8,7 @@ interface TypingEffectProps {
   typingMode?: "character" | "word" | "chunk";
   className?: string;
   chunkSize?: number;
+  startDelay?: number;
 }
 
 export const TypingEffect: React.FC<TypingEffectProps> = ({
@@ -16,6 +17,7 @@ export const TypingEffect: React.FC<TypingEffectProps> = ({
   typingMode = "character",
   className = "",
   chunkSize = 5,
+  startDelay = 0,
 }) => {
   const ref = useRef(null);
   const isInView = useInView(ref);
@@ -26,6 +28,10 @@ export const TypingEffect: React.FC<TypingEffectProps> = ({
     let currentTextContent: React.ReactNode[] = [];
     let textIndex = 0;
     const paragraphs = text.split("\n"); // Handle new lines
+
+    if (startDelay > 0) {
+      await new Promise((resolve) => setTimeout(resolve, startDelay));
+    }
 
     for (const paragraph of paragraphs) {
       if (textIndex > 0) {
@@ -72,7 +78,7 @@ export const TypingEffect: React.FC<TypingEffectProps> = ({
     if (isInView && !isComplete) {
       typeText();
     }
-  }, [isInView]);
+  }, [isInView, isComplete, startDelay, text, duration, typingMode, chunkSize]);
 
   return (
     <span ref={ref} className={className}>

@@ -16,17 +16,29 @@ Every line of code is a step forward on this journey of continuous learning. Wha
 
 const aboutCards = [
   {
-    icon: <BsCodeSlash className="text-indigo-400" />,
+    icon: (
+      <span className="text-indigo-400">
+        <BsCodeSlash size={20} />
+      </span>
+    ),
     title: 'Web Development',
     blurb: 'Building responsive, intuitive web applications with React, TypeScript, and modern frameworks. Focused on clean code principles, performance optimization, and creating seamless user experiences that delight and engage.'
   },
   {
-    icon: <IoMdBulb className="text-yellow-300" />,
+    icon: (
+      <span className="text-yellow-300">
+        <IoMdBulb size={20} />
+      </span>
+    ),
     title: 'DSA Enthusiast',
     blurb: 'Passionate about algorithmic thinking and efficient problem-solving. Constantly honing my skills through competitive programming, optimizing solutions, and finding elegant approaches to complex computational challenges.'
   },
   {
-    icon: <RiCpuFill className="text-pink-400" />,
+    icon: (
+      <span className="text-pink-400">
+        <RiCpuFill size={20} />
+      </span>
+    ),
     title: 'Project Explorer',
     blurb: 'Seeking innovative projects that push technical boundaries and solve real-world problems. Eager to collaborate on challenging initiatives that demand creative thinking and provide opportunities for continuous learning and growth.'
   }
@@ -78,7 +90,7 @@ export const About = () => (
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-            I craft digital experiences that blend creativity, technology, and curiosity. Always learning, always building—turning ideas into interactive realities.
+            I create seamless digital experiences where creativity meets engineering and ideas transform into reality.
           </motion.p>
           
           <div className="grid gap-3">

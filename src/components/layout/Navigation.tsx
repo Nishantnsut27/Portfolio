@@ -54,14 +54,14 @@ export const Navigation = () => {
 
   return (
     <header className="fixed inset-x-0 top-0 z-40">
-      <div className="mx-auto w-full max-w-5xl px-4 pt-6">
-        <div className="relative flex items-center justify-between rounded-full border border-white/10 bg-black/65 px-5 py-3 backdrop-blur-xl">
+      <div className="mx-auto w-full max-w-4xl px-4 pt-6">
+        <div className="relative flex items-center justify-between rounded-full border border-white/10 bg-black/65 px-4 py-3 backdrop-blur-xl md:px-5">
           <button
             type="button"
-            className="text-sm font-semibold uppercase tracking-[0.4em] text-gray-400"
+            className="text-sm font-semibold text-white"
             onClick={() => handleNavigate('#home')}
           >
-            NR
+            Nishant Raj
           </button>
 
           <nav className="hidden items-center gap-1 md:flex">
