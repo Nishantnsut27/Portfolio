@@ -3,9 +3,9 @@ import { AnimatePresence, motion } from 'framer-motion';
 import { cn } from '@/lib/utils';
 
 const NAV_ITEMS = [
-  { label: 'Home', href: '#home' },
   { label: 'About', href: '#about' },
   { label: 'Skills', href: '#skills' },
+  { label: 'Analytics', href: '#analytics' },
   { label: 'Projects', href: '#projects' },
   { label: 'Education', href: '#education' },
   { label: 'Contact', href: '#contact' }
@@ -55,7 +55,7 @@ export const Navigation = () => {
   return (
     <header className="fixed inset-x-0 top-0 z-40">
       <div className="mx-auto w-full max-w-4xl px-4 pt-6">
-        <div className="relative flex items-center justify-between rounded-full border border-white/10 bg-black/65 px-4 py-3 backdrop-blur-xl md:px-5">
+        <div className="relative flex items-center justify-between rounded-full border border-white/10 bg-black/65 px-4 py-2 backdrop-blur-xl md:px-5">
           <button
             type="button"
             className="text-sm font-semibold text-white"
