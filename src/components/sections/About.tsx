@@ -51,8 +51,8 @@ export const About = () => (
       fillClass="fill-indigo-700/30 dark:fill-indigo-700/40"
     />
     <div className="container flex flex-col px-8 mx-auto md:px-20 gap-8">
-      <div className="flex flex-col items-center md:items-start">
-        <div className="inline-flex flex-col items-start">
+      <div className="flex flex-col items-center">
+        <div className="inline-flex flex-col items-center">
           <h2 className="text-4xl font-bold text-white mb-0 relative">
             About Me
           </h2>
@@ -82,7 +82,7 @@ export const About = () => (
           </motion.div>
         </div>
         
-        <div className="mt-8 text-center md:text-left max-w-3xl">
+        <div className="mt-8 text-center max-w-3xl">
           <motion.p 
             className="text-xl md:text-2xl lg:text-3xl font-medium text-white/90 leading-snug mb-6"
             initial={{ opacity: 0, y: 20 }}

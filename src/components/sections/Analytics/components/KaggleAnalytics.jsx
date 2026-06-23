@@ -178,7 +178,7 @@ const KaggleAnalytics = () => {
         <KaggleHeatmap data={heatmapData} />
       </GlassCard>
 
-      <div className="grid grid-cols-[1.6fr_1fr] gap-3 items-start">
+      <div className="grid grid-cols-1 lg:grid-cols-[1.6fr_1fr] gap-3 items-start">
         <GlassCard>
           <SectionLabel>Competition Rankings</SectionLabel>
           <div className="flex flex-col">

@@ -1,4 +1,4 @@
-import { useMemo, useState } from 'react';
+import { useMemo } from 'react';
 
 const MONTH_NAMES = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
 const DAY_LABELS = { 1: 'M', 3: 'W', 5: 'F' };
@@ -17,7 +17,6 @@ const TT_BG   = 'rgba(8, 14, 28, 0.97)';
 const TT_BORDER = 'rgba(100,116,139,0.35)';
 
 const KaggleHeatmap = ({ data }) => {
-  const [hov, setHov] = useState(null);
 
   const parseDate = (s) => {
     const [d, m, y] = s.split('/').map(Number);
@@ -90,49 +89,6 @@ const KaggleHeatmap = ({ data }) => {
   const LINE_H = 15;
   const PAD_X  = 12;
 
-  const renderTooltip = () => {
-    if (!hov) return null;
-    const { cx, cy, colIdx, cell } = hov;
-    const lines = getLines(cell);
-    const boxH  = 22 + lines.length * LINE_H + 8;
-
-    const above = true;
-    const ty = cy - DOT_R - TT_GAP - boxH;
-
-    let tx = cx - TT_W / 2;
-    if (colIdx > totalCols * 0.75) tx = cx - TT_W + DOT_R;
-    tx = Math.max(L_PAD, Math.min(tx, svgW - TT_W - 4));
-
-    const ax = Math.max(tx + 12, Math.min(cx, tx + TT_W - 12));
-
-    const fmtDate = (d) =>
-      d.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' }) + ' (UTC)';
-
-    return (
-      <g style={{ pointerEvents: 'none' }}>
-        {!above && (
-          <polygon points={`${ax-ARROW},${ty} ${ax+ARROW},${ty} ${ax},${ty-ARROW}`} fill={TT_BG} />
-        )}
-
-        <rect x={tx} y={ty} width={TT_W} height={boxH} rx={8} ry={8}
-          fill={TT_BG} stroke={TT_BORDER} strokeWidth={1} />
-
-        <text x={tx+PAD_X} y={ty+16} fill="#e2e8f0" fontSize={11} fontWeight={600}>
-          {fmtDate(cell.date)}
-        </text>
-
-        {lines.map((line, i) => (
-          <text key={i} x={tx+PAD_X} y={ty + 28 + i * LINE_H} fill={line.c} fontSize={11}>
-            {line.t}
-          </text>
-        ))}
-
-        {above && (
-          <polygon points={`${ax-ARROW},${ty+boxH} ${ax+ARROW},${ty+boxH} ${ax},${ty+boxH+ARROW}`} fill={TT_BG} />
-        )}
-      </g>
-    );
-  };
 
   return (
     <div className="w-full">
@@ -181,14 +137,14 @@ const KaggleHeatmap = ({ data }) => {
                     filter: cell.total > 0 ? `drop-shadow(0 0 3px ${c}90)` : 'none',
                     transition: 'fill 0.12s',
                   }}
-                  onMouseEnter={() => setHov({ cx, cy, colIdx: ci, cell })}
-                  onMouseLeave={() => setHov(null)}
-                />
+                >
+                  <title>
+                    {`${cell.date.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })} (UTC)\n${getLines(cell).map(l => l.t).join('\n')}`}
+                  </title>
+                </circle>
               );
             })
           )}
-
-          {renderTooltip()}
         </svg>
       </div>
 
