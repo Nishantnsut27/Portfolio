@@ -1,14 +1,6 @@
 import { motion } from 'framer-motion';
-import { ArrowRight, Github, Instagram, Linkedin, Mail, Send } from 'lucide-react';
-import { contactInfo, heroContent, socialLinks } from '@/data/content';
+import { heroContent } from '@/data/content';
 import { TypingEffect } from '@/components/TypingEffect';
-
-const socialIconMap: Record<string, JSX.Element> = {
-  GitHub: <Github className="h-5 w-5" />,
-  LinkedIn: <Linkedin className="h-5 w-5" />,
-  Instagram: <Instagram className="h-5 w-5" />,
-  X: <ArrowRight className="h-5 w-5 rotate-45" />
-};
 
 export const Hero = () => {
 

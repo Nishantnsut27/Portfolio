@@ -107,6 +107,24 @@ export const About = () => (
               </motion.p>
             ))}
           </div>
+
+          {/* About Cards */}
+          <div className="mt-10 grid gap-6 md:grid-cols-3">
+            {aboutCards.map((card, index) => (
+              <motion.div
+                key={card.title}
+                className="rounded-2xl border border-white/10 bg-[rgba(12,12,14,0.6)] p-6 text-left backdrop-blur-xl transition hover:border-white/20"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                viewport={{ once: true }}
+              >
+                <div className="mb-3">{card.icon}</div>
+                <h3 className="mb-2 text-lg font-semibold text-white">{card.title}</h3>
+                <p className="text-sm leading-relaxed text-gray-400">{card.blurb}</p>
+              </motion.div>
+            ))}
+          </div>
         </div>
       </div>
     </div>
