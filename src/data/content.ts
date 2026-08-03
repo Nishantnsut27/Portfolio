@@ -1,9 +1,10 @@
 export const heroContent = {
   name: 'Nishant Raj',
-  headline: 'I build immersive interfaces that stay fast, accessible, and reliable.',
-  tagline: 'Electronics engineer turning complex ideas into polished web products.',
+  headline: 'Final-Year B.Tech Student | AI, ML & Full-Stack Development Enthusiast',
+  tagline:
+    'I build modern digital experiences by combining clean code, thoughtful design, and practical problem-solving. My work focuses on full-stack development, artificial intelligence, machine learning, and creating applications that are useful, responsive, and scalable.',
   statement:
-    "I make things. Sometimes they work, sometimes they do not. I keep going anyway, hoping it adds up to something meaningful.",
+    'Final-year B.Tech student at Netaji Subhas University of Technology (NSUT), currently learning, building, and improving my skills in software development, AI, ML, and modern web technologies.',
   primaryCta: {
     label: 'View Projects',
     href: '#projects'
@@ -146,7 +147,6 @@ export const skills: Skill[] = [
 export type Project = {
   name: string;
   description: string;
-  technologies: string[];
   liveUrl: string;
   repoUrl: string;
 };
@@ -156,23 +156,20 @@ export const spotlightProjects: Project[] = [
     name: 'NSUT Genie',
     description:
       'Campus assistant that consolidates timetables, notices, exam updates, and campus utilities in one responsive dashboard, giving NSUT students a single source of truth for daily workflows.',
-    technologies: ['React', 'Node.js', 'MongoDB'],
     liveUrl: 'https://nsut-genie.netlify.app/',
-    repoUrl: ''
+    repoUrl: 'https://github.com/DishantSaini55/GENIEEE'
   },
   {
     name: 'Muscle Torture Fitness',
     description:
       'Conversion-focused gym website with tailored membership funnels, trainer highlights, and instant WhatsApp onboarding that keeps leads engaged across devices.',
-    technologies: ['HTML', 'CSS', 'JavaScript', 'WhatsApp API'],
     liveUrl: 'https://gym-website-ten-chi.vercel.app/',
     repoUrl: 'https://github.com/Nishantnsut27/Gym-Website'
   },
   {
-    name: 'Notify Music Player',
+    name: 'Notify Music',
     description:
-      'Jamendo-backed music experience with curated playlists, search, adaptive theming, and offline-friendly playback so listeners can stay immersed without losing context.',
-    technologies: ['React', 'Jamendo API', 'CSS'],
+      'Modern full-stack music streaming platform with fast search, high-quality streaming, synchronized lyrics, and playlist management across desktop and mobile.',
     liveUrl: 'https://notify-music-player.vercel.app/',
     repoUrl: 'https://github.com/Nishantnsut27/Notify-Music-Player'
   },
@@ -180,7 +177,6 @@ export const spotlightProjects: Project[] = [
     name: 'Netflix Clone',
     description:
       'Pixel-precise Netflix recreation with hero carousels, hover previews, and responsive navigation that mirrors the real browsing flow across breakpoints.',
-    technologies: ['HTML', 'CSS', 'JavaScript'],
     liveUrl: 'https://netflix-clone-nishant.vercel.app/',
     repoUrl: 'https://github.com/Nishantnsut27/Netflix-clone'
   },
@@ -188,7 +184,6 @@ export const spotlightProjects: Project[] = [
     name: 'IoT Smart Intruder Detection',
     description:
       'ESP32-CAM powered surveillance stack that snaps motion-triggered footage, pushes alerts to the companion mobile app, and syncs evidence to secure storage for realtime awareness.',
-    technologies: ['ESP32-CAM', 'IoT', 'C++', 'Mobile App'],
     liveUrl: '',
     repoUrl: 'https://github.com/Nishantnsut27/Smart-intruder-system'
   }
@@ -209,7 +204,7 @@ export const educationHistory: Education[] = [
     location: 'New Delhi, India',
     period: '2023 – 2027',
     highlights: [
-      'Third-year student exploring the intersection of embedded systems and modern web development.',
+      'Final-year B.Tech student exploring the intersection of embedded systems and modern web development.',
       'Strengthening fundamentals across electronics, signal processing, and communication networks.',
       'Translating hardware-first thinking into disciplined, performant software builds.'
     ]

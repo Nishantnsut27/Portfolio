@@ -35,11 +35,14 @@ export const Hero = () => {
             </span>
           </h1>
 
+          <p className="text-lg font-medium text-accent sm:text-xl">
+            {heroContent.headline}
+          </p>
           <p className="text-xl text-gray-200 sm:text-2xl">
-            I build thoughtful digital experiences that blend clean code, creative engineering, and meaningful design turning ideas into software that feels intuitive, modern, and alive.
+            {heroContent.tagline}
           </p>
           <p className="max-w-2xl text-balance text-sm leading-relaxed text-gray-400 sm:text-base">
-            Passionate about web development, Machine Learning, design, and innovation. Exploring new tools, solving real problems, and making the web a little brighter every day.
+            {heroContent.statement}
           </p>
         </motion.div>
 

@@ -16,7 +16,7 @@ import iotSmartIntruderImg from '@/assets/Projects/Iot-based-smart-intruder.png'
 const projectImages: Record<string, string> = {
   'NSUT Genie': nsutGenieImg,
   'Muscle Torture Fitness': muscleTortureImg,
-  'Notify Music Player': notifyMusicImg,
+  'Notify Music': notifyMusicImg,
   'Netflix Clone': netflixCloneImg,
   'IoT Smart Intruder Detection': iotSmartIntruderImg
 };
@@ -28,7 +28,7 @@ const ProjectCard = ({ project, index }: { project: Project; index: number }) =>
   const imageParallax = useTransform(scrollYProgress, [0, 1], [18, -18]);
   const image = projectImages[project.name];
   const isIotProject = project.name === 'IoT Smart Intruder Detection';
-  const isCompactProject = ['NSUT Genie', 'Muscle Torture Fitness', 'Notify Music Player'].includes(project.name);
+  const isCompactProject = ['NSUT Genie', 'Muscle Torture Fitness', 'Notify Music'].includes(project.name);
 
   return (
     <motion.div

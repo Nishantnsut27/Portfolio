@@ -6,13 +6,11 @@ import { RiCpuFill } from 'react-icons/ri';
 import { Spotlight } from '../ui/Spotlight';
 import { motion } from 'framer-motion';
 
-const ABOUT_ME = `Hello there! I'm Nishant Raj, a third-year BTech student at NSUT exploring the intersection of code and creativity.
+const ABOUT_ME = `I'm Nishant Raj, a final-year B.Tech student at Netaji Subhas University of Technology (NSUT). I am interested in Software Development, Artificial Intelligence, Machine Learning, and Full-Stack Development.
 
-Web development captivates me during the day, while DSA challenges my problem-solving skills at night. This duality fuels my growth as a technologist and shapes my approach to creating efficient, scalable solutions.
+I enjoy turning ideas into practical applications using React, TypeScript, Node.js, Express, Python, and modern AI tools. I like building projects that are not only visually polished but also technically strong and useful in real-world scenarios.
 
-I'm actively seeking new projects that push boundaries and create meaningful impact. I believe in building things that matter—where purpose meets performance, and innovation serves intention.
-
-Every line of code is a step forward on this journey of continuous learning. What's next? That's the question that keeps me coding.`;
+Alongside development, I spend time improving my problem-solving skills, exploring new technologies, and learning how to build better software systems. My goal is to keep growing as a developer and create work that is reliable, impactful, and well engineered.`;
 
 const aboutCards = [
   {
