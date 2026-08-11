@@ -10,14 +10,14 @@ import { cn } from '@/lib/utils';
 import nsutGenieImg from '@/assets/Projects/NSUT-GENIE.png';
 import muscleTortureImg from '@/assets/Projects/Muscle-torture-fitness.png';
 import notifyMusicImg from '@/assets/Projects/Notify-music-player.png';
-import netflixCloneImg from '@/assets/Projects/Netflix-clone.png';
+import llmArenaImg from '@/assets/Projects/llmarena.png';
 import iotSmartIntruderImg from '@/assets/Projects/Iot-based-smart-intruder.png';
 
 const projectImages: Record<string, string> = {
   'NSUT Genie': nsutGenieImg,
   'Muscle Torture Fitness': muscleTortureImg,
   'Notify Music': notifyMusicImg,
-  'Netflix Clone': netflixCloneImg,
+  'LLM Arena': llmArenaImg,
   'IoT Smart Intruder Detection': iotSmartIntruderImg
 };
 

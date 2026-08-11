@@ -174,11 +174,11 @@ export const spotlightProjects: Project[] = [
     repoUrl: 'https://github.com/Nishantnsut27/Notify-Music-Player'
   },
   {
-    name: 'Netflix Clone',
+    name: 'LLM Arena',
     description:
-      'Pixel-precise Netflix recreation with hero carousels, hover previews, and responsive navigation that mirrors the real browsing flow across breakpoints.',
-    liveUrl: 'https://netflix-clone-nishant.vercel.app/',
-    repoUrl: 'https://github.com/Nishantnsut27/Netflix-clone'
+      'One prompt goes to every model you pick. They answer side by side, each with its own real speed and token count, and you decide which one was actually worth it.',
+    liveUrl: 'https://llmarenaai.vercel.app/',
+    repoUrl: 'https://github.com/Nishantnsut27/LLM-arena'
   },
   {
     name: 'IoT Smart Intruder Detection',
